@@ -43,18 +43,30 @@ django_course/
 ├── django_tutorial/
 │ ├── settings.py
 │ ├── urls.py
+│ ├── asgi.py
+│ ├── wsgi.py
+│ ├── __init__.py
 
 ├── home/
 │ ├── models.py
 │ ├── views.py
 │ ├── urls.py
+│ ├── admin.py
+│ ├── apps.py
+│ ├── forms.py
+│ ├── tests.py
 │ └── templates/
 │ ├── base.html
 │ ├── booking.html
-│ └── ...
+│ └── confirm.html
+│ ├── deals.html
+│ ├── menu.html
+│ ├── about.html
+│ ├── contact.html
 ├── static/
 │ └── css/
-│ └── style.css
+│ └── images
+│ └── js
 └── manage.py
 
 1. **Clone the repository**
