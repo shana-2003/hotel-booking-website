@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+about
+{%  endblock %}
+    {% block content %}
+    <style>
+     
+      .main{
+        display: flex;
+        margin-bottom: 100px;
+        margin-top:50px;
+      }
+      .my-vdo{
+                         
+          width: 100%;       
+          max-width: 350px; 
+          height: auto; 
+          margin-left: 110px;   
+          box-shadow: 0 8px 30px rgba(0,0,0,0.1),
+                   0 0 15px rgba(0, 0, 0, 0.1);
+        border:1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+            pointer-events: none;
+            margin-top:30px;
+
+        }
+        .my-vdo::-webkit-media-controls {
+  display: none !important;
+}
+      .main .desc{
+        width: 800px;
+        margin: auto;
+        font-size: 25px;
+        margin-right: 100px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      .desc h3{
+        margin-bottom: 20px;
+      }
+      .desc p{
+          margin-bottom: 20px;
+      }
+    </style>
+      
+  <div class="about bg-warning">
+     
+     <div class="main">
+    <div class="vdos">
+ <video class="my-vdo"autoplay muted loop playsinline controlslist="nodownload nofullscreen noplaybackrate" disablepictureinpicture>
+    <source src="{% static 'images/about.mp4' %}" type="video/mp4">
+  </video>
+</div>
+    <div class="desc">
+     <h3> 🍽️ Where Great Taste Begins With a Table...</h3>
+
+<p>Welcome to <b>Foodista</b> — your gateway to unforgettable dining experiences. We’re not just about reservations; we’re about flavors, aromas, and the joy that only good food can bring.</p>
+
+<p>Whether you're craving sizzling street food, rich traditional dishes, or gourmet dining under warm lights, Foodista helps you find the perfect seat at your favorite place. No more waiting in lines or calling restaurants — just explore, click, and book in seconds.</p>
+
+<p>We’ve partnered with top-rated restaurants that serve everything from comforting classics to bold new tastes, all curated with care to satisfy every craving. From spicy bites to sweet delights, your next favorite meal is just a reservation away.</p>
+
+<p>At <b>Foodista</b>, we celebrate food in all its glory — shared laughter over a biryani bowl, quiet coffee moments, birthday cakes that surprise, and starters that spark stories.</p>
+
+<p><b>Foodista</b> – Because every meal deserves a place.</p>
+
+</div>
+    </div>
+ </div>
+    {%  endblock %}

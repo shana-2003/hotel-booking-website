@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+menu
+{% endblock %}
+{% block content %}
+<style>
+  .menu-background {
+    background-image: url("{% static 'images/contact.png' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0;
+   
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0.2); /* semi-transparent white */
+    border: none;
+    color: #fff; /* white text for contrast */
+    backdrop-filter: blur(8px); /* optional: glass effect */
+  }
+
+  .card-header {
+    background-color: rgba(0, 0, 0, 0.3); /* dark semi-transparent header */
+    border-bottom: none;
+    color: #fff;
+  }
+  .custom-item p {
+  color: #ffffcc !important;
+}
+
+
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    color: #ffffcc;
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="menu-background">
+  <div class="d-flex flex-wrap justify-content-center gap-5">
+    {% for d in menu %}
+    <div class="card " style="width: 18rem; margin-bottom: 20px; ">
+      <div class="card-header">
+        <h4>{{ d.item_name }}</h4>
+      </div>
+      <ul class="list-group list-group-flush ">
+        <li class="list-group-item custom-item">
+          <p>{{ d.item_decs|linebreaksbr }}</p>
+        </li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

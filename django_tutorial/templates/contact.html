@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block content %}
+<style>
+  .contact-page {
+    background-image: url("{% static 'images/contact.png' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .contact-box h2 {
+    color: #c0392b;
+    margin-bottom: 20px;
+  }
+
+  .contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+  }
+
+  .contact-info p span {
+    font-weight: bold;
+    color: #000;
+  }
+</style>
+
+<div class="contact-page">
+  <div class="contact-box">
+    <h2>📞 Get in Touch with Foodista</h2>
+    <div class="contact-info">
+      <p><span>Email:</span> contact@foodista.com</p>
+      <p><span>Phone:</span> +91 9090909090</p>
+      <p><span>Address:</span> MG Road, Kochi, Kerala, India</p>
+      <p><span>Opening Hours:</span> 11:00 AM – 10:00 PM (All Days)</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

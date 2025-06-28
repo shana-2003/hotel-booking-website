@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Booking Confirmation
+{% endblock %}
+
+{% block content %}
+<style>
+  .booking-confirmation-bg {
+    background-image: url("{% static 'images/booking.png' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: rgba(0, 0, 0, 0.6); /* Slight dark background */
+    color: #fff;
+    border: none;
+  }
+</style>
+
+<div class="booking-confirmation-bg text-center">
+  <div class="container">
+    
+    <div class="alert alert-info" role="alert">
+      Thank you for choosing us! Your table booking request has been received.<br>  
+      We will contact you shortly through your email to confirm the reservation.
+    </div>
+  </div>
+</div>
+{% endblock %}

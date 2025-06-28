@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}
+deals
+{%  endblock %}
+    {% block content %}
+    <style>
+      .card{
+        transition: 1s;
+      }
+            .card:hover{
+        transform: scale(1.04);
+      }
+
+    </style>
+     <div class="container-fluid text-center bg-warning">
+    <h2 class="text-center">Hot Deals Of The Day!</h2>
+   
+        {% for d in deals%}
+        
+        <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">
+  <img src="{{d.food_image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{d.food_name}}</h5>
+    <p class="card-text">{{d.food_desc}}</p>
+    
+  </div>
+</div>
+   
+        {% endfor %}
+         </div>
+    {%  endblock %}
